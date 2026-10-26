@@ -19,3 +19,16 @@
 Standalone Vite/React/TypeScript (consistent with Atlas Web), React Router, TanStack Query, typed TypeScript clients generated from API schemas. Separate frontend CI/CD from management backend. No Turborepo/Nx or monorepo tooling.
 
 No live portal, payments, Worker deployments or domain provisioning is claimed by this README.
+
+
+## Required frontend architecture and development standards
+
+This standalone React portal uses **DDD vocabulary for theme/storefront user flows, Clean Architecture for dependency direction and Hexagonal ports/adapters for Node Storefront API and Java IAM/billing**. Domain is pure TypeScript; presentation React does not become an independent business source of truth. CQRS is pragmatic, not one handler per button.
+
+- [Architecture and bounded contexts](docs/architecture/clean-hexagonal.md)
+- [Feature folder structure and import rules](docs/architecture/folder-structure.md)
+- [Engineering/security rules](docs/guidelines/engineering-rules.md)
+- [Testing/CI/release gates](docs/guidelines/testing-release.md)
+- [Module backlog](docs/modules/index.md)
+
+No Turborepo/Nx. The portal is not the SDK, the auth UI or the backend; implementation remains pending.
