@@ -32,3 +32,8 @@ This standalone React portal uses **DDD vocabulary for theme/storefront user flo
 - [Module backlog](docs/modules/index.md)
 
 No Turborepo/Nx. The portal is not the SDK, the auth UI or the backend; implementation remains pending.
+
+
+## Shared API contracts (2026-10-26)
+
+[atlashub_contracts](https://github.com/OlamidotunIY/atlashub_contracts) now owns versioned Protobuf cross-repository APIs. This **authenticated Portal** may consume separately packaged management/public schema types via a browser-compatible Connect/gRPC-Web gateway or other deliberately supported HTTP adapter; private Java AI/financial RPCs must not be exposed in the browser. Auth remains separate [Auth Web](https://github.com/OlamidotunIY/atlashub_auth_web) and central OIDC/IdP, not a gRPC login call. Use public/management scoped clients, independent dependency versions and strict server-side org permissions. [Contract classification](https://github.com/OlamidotunIY/atlashub_contracts/blob/main/docs/guidelines/compatibility.md).
