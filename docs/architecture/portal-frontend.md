@@ -15,7 +15,7 @@ Same Atlas Hub identity via **separate `atlashub_auth_web`** and Java centralize
 - Portal calls separate TypeScript Storefront Management API from `atlashub_storefront` using versioned contract client, scoped authenticated portal session.
 - Java backend is authoritative for organization creation/membership, approved account/user identity, billing/theme licenses, catalog/product/stock/cart/payment and provider policy.
 - Storefront SDK for *public website themes* is separate from authenticated portal admin API; never expose merchant admin access in uploaded theme.
-- A developer theme SDK/CLI/scaffold is planned as independent package/repo `atlashub_theme_sdk`, **not verified created**.
+- The separate [`atlashub_theme_sdk`](https://github.com/OlamidotunIY/atlashub_theme_sdk) repository now exists with architecture documentation; SDK/CLI/scaffold implementation and npm publishing remain pending.
 - Only authorized merchant can install/publish a store; only owning creator uploads/edits theme listing. Server rechecks every action.
 
 ## Screens/routes (proposed)
