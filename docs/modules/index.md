@@ -23,3 +23,8 @@
 - Asset ownership and page preview/deploy fail closed; unknown hostname never resolves wrong merchant.
 - Theme portal doesn't duplicate Atlas Web finance/HR/inventory pages.
 - No privileged credentials or cookies sent to uploaded theme code, and no auth tokens in cross-origin redirects.
+
+
+## Required engineering references
+
+Feature implementations follow [DDD/Clean/Hexagonal policy](../architecture/clean-hexagonal.md), [frontend feature folder conventions](../architecture/folder-structure.md), [security/engineering rules](../guidelines/engineering-rules.md) and [testing/release criteria](../guidelines/testing-release.md). Server-owned IAM, entitlements, pricing and provider status cannot be authoritatively decided in React.
